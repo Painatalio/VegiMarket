@@ -1,0 +1,311 @@
+﻿<section>
+    <div style="font-family:Rockwell; background-image:url(Content/images/Mercado.jpg); background-repeat:no-repeat; background-size:cover; background-attachment:fixed; min-height:900px">
+        <br />
+        <br />
+        <br />
+        <div class="container-fluid">
+            <div class="col-lg-2 col-lg-offset-0">
+                <div class="well">
+                    <h3 align="center">Procura</h3>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="regiao" class="control-label">Região</label>
+                            <select class="form-control" name="" id="regiao">
+                                <option value="">Any</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="produto" class="control-label">Produto</label>
+                            <select class="form-control" name="" id="produto">
+                                <option value="">Any</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="produtor" class="control-label">Produtor</label>
+                            <select class="form-control" name="" id="produtor">
+                                <option value="">Any</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pricefrom" class="control-label">Preço Mínimo</label>
+                            <div class="input-group">
+                                <div class="input-group-addon" id="basic-addon1">€</div>
+                                <input type="text" class="form-control" id="pricefrom" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="priceto" class="control-label">Preço Máximo</label>
+                            <div class="input-group">
+                                <div class="input-group-addon" id="basic-addon2">€</div>
+                                <input type="text" class="form-control" id="priceto" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p id="nonlinear" data-bind="for: a"></p>
+                            <p id="lower-value"></p>
+                            <p id="upper-value"></p>
+                        </div>
+                        <div class="input-group" id="adv-search">
+                            <input class="form-control" placeholder="Procura" type="text">
+                            <div class="input-group-btn">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div class="container col-lg-10" style="background-color:white">
+                    <h3><img class="img-circle" src="Content/images/Produtor.png" alt="Produtor" width="100" height="100" /> NARCfrutas</h3>
+                    <div class="row">
+                        <div class="row">
+                            <div class="col-md-9"></div>
+                            <div class="col-md-3">
+                                <div class="controls pull-right hidden-xs">
+                                    <a class="left fa fa-chevron-left btn btn-success" href="#carousel-example" data-slide="prev"></a><a class="right fa fa-chevron-right btn btn-success" href="#carousel-example" data-slide="next"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="well col-item">
+                                                <div class="photo">
+                                                    <img class="img-circle" src="Content/images/Macas.jpg" alt="Maças" width="300" height="300">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5 class="price-text-color">
+                                                                1.00€/Kg
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="separator clear-left">
+                                                        <p class="btn-details">
+                                                            <button type="button" data-toggle="modal" data-target="" class="btn btn-default col-sm-4"><span class="fa fa-list" aria-hidden="true"> Detalhes</span></button>
+                                                        </p>
+                                                        <span class="col-sm-3"></span>
+                                                        <p class="btn-add">
+                                                            <button type="button" class="btn btn-default col-sm-4">1.00€/Kg <span class="fa fa-shopping-cart" aria-hidden="true"></span></button>
+                                                        </p>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="well col-item">
+                                                <div class="photo">
+                                                    <img class="img-circle" src="Content/images/Macas.jpg" alt="Maças" width="300" height="300">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5 class="price-text-color">
+                                                                1.00€/Kg
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="separator clear-left">
+                                                        <p class="btn-details">
+                                                            <button type="button" class="btn btn-default col-sm-4"><span class="fa fa-list" aria-hidden="true"> Detalhes</span></button>
+                                                        </p>
+                                                        <span class="col-sm-3"></span>
+                                                        <p class="btn-add">
+                                                            <button type="button" class="btn btn-default col-sm-4">1.00€/Kg <span class="fa fa-shopping-cart" aria-hidden="true"></span></button>
+                                                        </p>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="well col-item">
+                                                <div class="photo">
+                                                    <img class="img-circle" src="Content/images/Macas.jpg" alt="Maças" width="300" height="300">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5 class="price-text-color">
+                                                                1.00€/Kg
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="separator clear-left">
+                                                        <p class="btn-details">
+                                                            <button type="button" class="btn btn-default col-sm-4"><span class="fa fa-list" aria-hidden="true"> Detalhes</span></button>
+                                                        </p>
+                                                        <span class="col-sm-3"></span>
+                                                        <p class="btn-add">
+                                                            <button type="button" class="btn btn-default col-sm-4">1.00€/Kg <span class="fa fa-shopping-cart" aria-hidden="true"></span></button>
+                                                        </p>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="well col-item">
+                                                <div class="photo">
+                                                    <img class="img-circle" src="Content/images/Macas.jpg" alt="Maças" width="300" height="300">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5 class="price-text-color">
+                                                                1.00€/Kg
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="separator clear-left">
+                                                        <p class="btn-details">
+                                                            <button type="button" class="btn btn-default col-sm-4"><span class="fa fa-list" aria-hidden="true"> Detalhes</span></button>
+                                                        </p>
+                                                        <span class="col-sm-3"></span>
+                                                        <p class="btn-add">
+                                                            <button type="button" class="btn btn-default col-sm-4">1.00€/Kg <span class="fa fa-shopping-cart" aria-hidden="true"></span></button>
+                                                        </p>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                            <div class="well col-item">
+                                                <div class="photo">
+                                                    <img class="img-circle" src="Content/images/Macas.jpg" alt="Maças" width="300" height="300">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5 class="price-text-color">
+                                                                1.00€/Kg
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="separator clear-left">
+                                                        <p class="btn-details">
+                                                            <button type="button" class="btn btn-default col-sm-4"><span class="fa fa-list" aria-hidden="true"> Detalhes</span></button>
+                                                        </p>
+                                                        <span class="col-sm-3"></span>
+                                                        <p class="btn-add">
+                                                            <button type="button" class="btn btn-default col-sm-4">1.00€/Kg <span class="fa fa-shopping-cart" aria-hidden="true"></span></button>
+                                                        </p>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="well col-item">
+                                                <div class="photo">
+                                                    <img class="img-circle" src="Content/images/Macas.jpg" alt="Maças" width="300" height="300">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5 class="price-text-color">
+                                                                1.00€/Kg
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="separator clear-left">
+                                                        <p class="btn-details">
+                                                            <button type="button" class="btn btn-default col-sm-4"><span class="fa fa-list" aria-hidden="true"> Detalhes</span></button>
+                                                        </p>
+                                                        <span class="col-sm-3"></span>
+                                                        <p class="btn-add">
+                                                            <button type="button" class="btn btn-default col-sm-4">1.00€/Kg <span class="fa fa-shopping-cart" aria-hidden="true"></span></button>
+                                                        </p>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="well col-item">
+                                                <div class="photo">
+                                                    <img class="img-circle" src="Content/images/Macas.jpg" alt="Maças" width="300" height="300">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5 class="price-text-color">
+                                                                1.00€/Kg
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="separator clear-left">
+                                                        <p class="btn-details">
+                                                            <button type="button" class="btn btn-default col-sm-4"><span class="fa fa-list" aria-hidden="true"> Detalhes</span></button>
+                                                        </p>
+                                                        <span class="col-sm-3"></span>
+                                                        <p class="btn-add">
+                                                            <button type="button" class="btn btn-default col-sm-4">1.00€/Kg <span class="fa fa-shopping-cart" aria-hidden="true"></span></button>
+                                                        </p>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <div class="well col-item">
+                                                <div class="photo">
+                                                    <img class="img-circle" src="Content/images/Macas.jpg" alt="Maças" width="300" height="300">
+                                                </div>
+                                                <div class="info">
+                                                    <div class="row">
+                                                        <div class="price col-md-6">
+                                                            <h5 class="price-text-color">
+                                                                1.00€/Kg
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="separator clear-left">
+                                                        <p class="btn-details">
+                                                            <button type="button" class="btn btn-default col-sm-4"><span class="fa fa-list" aria-hidden="true"> Detalhes</span></button>
+                                                        </p>
+                                                        <span class="col-sm-3"></span>
+                                                        <p class="btn-add">
+                                                            <button type="button" class="btn btn-default col-sm-4">1.00€/Kg <span class="fa fa-shopping-cart" aria-hidden="true"></span></button>
+                                                        </p>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

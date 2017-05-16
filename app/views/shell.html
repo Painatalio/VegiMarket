@@ -1,0 +1,34 @@
+﻿<div>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:lawngreen">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="Content/images/Logotipo.png" alt="Logotipo" style="width:60px; height:60px; padding:0px; border:none; margin:0px" />
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="loader" data-bind="css: { active: router.isNavigating }">
+                    <i class="fa fa-spinner fa-spin fa-2x"></i>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right" style="padding-right:40px">
+                <li data-bind="with:router.navigationModel()[0]">
+                    <a class="fa fa-phone" data-bind="attr: { href: hash }"></a>
+                </li>
+                <li data-bind="with:router.navigationModel()[1]">
+                    <a class="fa fa-sign-in" data-bind="attr: { href: hash }"></a>
+                </li>                
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-host" data-bind="router: { transition:'entrance' }"></div>
+</div>
