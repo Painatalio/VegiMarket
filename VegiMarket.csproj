@@ -65,6 +65,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\viewmodels\carrinho.js" />
+    <Content Include="app\views\carrinho.html" />
     <Content Include="Content\images\hortafina.png" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -128,7 +130,6 @@
     <Content Include="app\viewmodels\shell.js" />
     <Content Include="app\viewmodels\welcome.js" />
     <Content Include="app\views\contactos.html" />
-    <Content Include="app\views\detail.html" />
     <Content Include="app\views\login.html" />
     <Content Include="app\views\marketplace.html" />
     <Content Include="app\views\produtores.html" />
@@ -266,6 +267,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -7,7 +7,6 @@
         'knockout': '../lib/knockout/knockout-3.4.0',
         'bootstrap': '../lib/bootstrap/js/bootstrap',
         'jquery': '../lib/jquery/jquery-1.9.1',
-        'jquery.ui.slider': '../lib/jqueryui/jquery-ui-1.12.1'
     },
     shim: {
         'bootstrap': {
@@ -22,7 +21,7 @@ define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'bootstrap'],
     system.debug(true);
     //>>excludeEnd("build");
 
-    app.title = '';
+    app.title = 'VegiMarket';
 
     app.configurePlugins({
         router:true,
