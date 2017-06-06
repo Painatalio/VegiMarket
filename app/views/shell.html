@@ -21,14 +21,23 @@
 
             <ul class="nav navbar-nav navbar-right" style="padding-right:40px">
                 <li data-bind="with:router.navigationModel()[0]">
-                    <a class="fa fa-phone" data-bind="attr: { href: hash }"> Contactos</a>
+                    <a class="fa fa-home" data-bind="attr: { href: hash }"> MarketPlace</a>
                 </li>
                 <li data-bind="with:router.navigationModel()[1]">
+                    <a class="fa fa-phone" data-bind="attr: { href: hash }"> Contactos</a>
+                </li>
+                <li id="login" style="display:block" data-bind="with:router.navigationModel()[2]">
                     <a class="fa fa-sign-in" data-bind="attr: { href: hash }"> Login</a>
                 </li>
-                <li data-bind="with:router.navigationModel()[2]">
+                <li data-bind="with:router.navigationModel()[3]">
                     <a class="fa fa-shopping-cart" data-bind="attr: { href: hash }"> Carrinho</a>
-                </li>   
+                </li>
+                <li id="perfil" style="display:none" data-bind="with:router.navigationModel()[4]">
+                    <a class="fa fa-user" data-bind="attr: { href : hash }"> Perfil</a>
+                </li>
+                <li id="perfil2" style="display:none" data-bind="with:router.navigationModel()[5]">
+                    <a class="fa fa-user" data-bind="attr: { href : hash }"> Perfil</a>
+                </li>
             </ul>
         </div>
     </nav>

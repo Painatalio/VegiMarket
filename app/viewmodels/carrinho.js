@@ -1,8 +1,7 @@
 ﻿define(['plugins/http', 'durandal/app', 'knockout'], function () {
     return {
         attached: function () {
-            console.log(localStorage.getItem("carrinho"));
-            if (JSON.stringify(localStorage.getItem("carrinho")) != JSON.stringify('[]')) {
+            if (JSON.stringify(localStorage.getItem("carrinho")) != JSON.stringify('[]') && localStorage.getItem("carrinho") != null) {
                 $("#no_products").remove();
                 $("#compra").append('<p class="btn btn-details"><button type="button" class="btn btn-info col-xs-12" onclick= "" > Finalizar Compra</button ></p >');
                 var cart = JSON.parse(localStorage.getItem("carrinho"));
@@ -17,56 +16,52 @@
                     $("#carrinho").append(quantidade);
                     $("#carrinho").append(botao);
                 }
-            }
-            else if (localStorage.getItem("carrinho") == null) {
-                console.log("adeus");
-                $("#finalizar").append('<h1 id="no_products">Não tem produtos no seu carrinho!</h1>');
-            }
-            
 
-            removeCart = function (nome) {
-                $("#" + nome.id).remove();
-                $("#" + nome.id + "1").remove();
-                $("#" + nome.id + "2").remove();
-                for (i = 0; i < cart.length; i++) {
-                    if (cart[i].nome == nome.id) {
-                        cart.splice(i,1);
+                removeCart = function (nome) {
+                    $("#" + nome.id).remove();
+                    $("#" + nome.id + "1").remove();
+                    $("#" + nome.id + "2").remove();
+                    for (i = 0; i < cart.length; i++) {
+                        if (cart[i].nome == nome.id) {
+                            cart.splice(i, 1);
+                        }
+                    }
+                    localStorage.setItem("carrinho", JSON.stringify(cart));
+                    if (JSON.stringify(localStorage.getItem("carrinho")) == JSON.stringify('[]')) {
+                        $('#compra').remove();
+                        $("#finalizar").append('<h1 id="no_products">Não tem produtos no seu carrinho!</h1>');
                     }
                 }
-                localStorage.setItem("carrinho", JSON.stringify(cart));
-                console.log(localStorage.getItem("carrinho"));
-                if (JSON.stringify(localStorage.getItem("carrinho")) == JSON.stringify('[]')) {
-                    $('#compra').remove();
-                    $("#finalizar").append('<h1 id="no_products">Não tem produtos no seu carrinho!</h1>');
-                }
-            }
 
-            jQuery(document).ready(function () {
-                console.log(cart.length);
-                for (i = 0; i < cart.length; i++) {
-                    $("#qtyplus"+i+"").click(function (e) {
-                        e.preventDefault();
-                        fieldName = $(this).attr('field');
-                        var currentVal = parseInt($('input[name=' + fieldName + ']').val());
-                        if (!isNaN(currentVal)) {
-                            $('input[name=' + fieldName + ']').val(currentVal + 1);
-                        } else {
-                            $('input[name=' + fieldName + ']').val(1);
-                        }
-                    });
-                    $("#qtyminus" + i +"").click(function (e) {
-                        e.preventDefault();
-                        fieldName = $(this).attr('field');
-                        var currentVal = parseInt($('input[name=' + fieldName + ']').val());
-                        if (!isNaN(currentVal) && currentVal > 1) {
-                            $('input[name=' + fieldName + ']').val(currentVal - 1);
-                        } else {
-                            $('input[name=' + fieldName + ']').val(1);
-                        }
-                    });
-                }
-                
-            });
+                jQuery(document).ready(function () {
+                    console.log(cart.length);
+                    for (i = 0; i < cart.length; i++) {
+                        $("#qtyplus" + i + "").click(function (e) {
+                            e.preventDefault();
+                            fieldName = $(this).attr('field');
+                            var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+                            if (!isNaN(currentVal)) {
+                                $('input[name=' + fieldName + ']').val(currentVal + 1);
+                            } else {
+                                $('input[name=' + fieldName + ']').val(1);
+                            }
+                        });
+                        $("#qtyminus" + i + "").click(function (e) {
+                            e.preventDefault();
+                            fieldName = $(this).attr('field');
+                            var currentVal = parseInt($('input[name=' + fieldName + ']').val());
+                            if (!isNaN(currentVal) && currentVal > 1) {
+                                $('input[name=' + fieldName + ']').val(currentVal - 1);
+                            } else {
+                                $('input[name=' + fieldName + ']').val(1);
+                            }
+                        });
+                    }
+
+                });
+            } else {
+                $("#finalizar").append("<h1 id='no_products'>Não tem produtos no seu carrinho!</h1>");
+            }         
         },
     }
 });

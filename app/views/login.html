@@ -1,12 +1,12 @@
 ﻿<section>
     <hr class="prettyline">
     <div class="container-fluid col-xs-12">
-        <form class="form-signin">
+        <div class="form-signin">
             <h2 class="form-signin-heading">Entre na sua conta!</h2>
-            <label for="inputEmail" class="control-label">Endereço Email</label>
-            <input id="inputEmail" class="form-control" placeholder="Introduza o seu endereço email" required="" autofocus="" type="email">
-            <label for="inputPassword" class="control-label">Password</label>
-            <input id="inputPassword" class="form-control" placeholder="Introduza a sua password" required="" type="password">
+            <label for="loginEmail" class="control-label">Endereço Email</label>
+            <input id="loginEmail" class="form-control" placeholder="Introduza o seu endereço email" required="" autofocus="" type="email">
+            <label for="loginPassword" class="control-label">Password</label>
+            <input id="loginPassword" class="form-control" placeholder="Introduza a sua password" required="" type="password">
             <div class="control-group">
                 <label class="control-label">Tipo de Conta:</label>
                 <select class="form-control" id="accountype" name="accountype">
@@ -19,19 +19,23 @@
                     <input value="remember-me" type="checkbox"> Lembrar-me
                 </label>
             </div>
-            <button class="btn btn-lg btn-primary col-xs-5" type="submit">Entrar</button>
-        </form>
+            <button class="btn btn-lg btn-primary col-xs-5" onclick="login()" type="submit">Entrar</button>
+        </div>
         <br>
     </div>
     <hr class="prettyline">
     <div class="container col-xs-12">
         <br>
-        <form class="form-signin">
+        <div class="form-signin">
             <h2 class="form-signin-heading">Ainda não tem conta? De que está à espera?</h2>
-            <label for="inputEmail" class="control-label">Endereço Email</label>
-            <input id="inputEmail" class="form-control" placeholder="Introduza o endereço email" required="" autofocus="" type="email">
-            <label for="inputPassword" class="control-label">Password</label>
-            <input id="inputPassword" class="form-control" placeholder="Introduza a password" required="" type="password">
+            <label for="primeironome" class="control-label">Primeiro Nome: </label>
+            <input id="primeironome" class="form-control" placeholder="Introduza o seu primeiro nome" required="" type="text" />
+            <label for="ultimonome" class="control-label">Último Nome: </label>
+            <input id="ultimonome" class="form-control" placeholder="Introduza o seu último nome" required="" type="text" />
+            <label for="registoEmail" class="control-label">Endereço Email</label>
+            <input id="registoEmail" class="form-control" placeholder="Introduza o endereço email" required="" autofocus="" type="email">
+            <label for="registoPassword" class="control-label">Password</label>
+            <input id="registoPassword" class="form-control" placeholder="Introduza a password" required="" type="password">
             <div class="control-group">
                 <label class="control-label" for="reenterpassword">Re-Introduza a Password:</label>
                 <div class="controls">
@@ -39,13 +43,70 @@
                 </div>
             </div>
             <div class="control-group">
+                <label class="control-label">Morada: </label>
+                <input id="morada" class="form-control" placeholder="Introduza a sua morada" required="" type="text" />
+            </div>
+            <div class="control-group">
                 <label class="control-label">Tipo de Conta:</label>
-                <select class="form-control" id="accountype" name="accountype">
+                <select class="form-control" onchange="payment()" id="accountype" name="accountype">
                     <option>Cliente</option>
-                    <option>Produtor</option>
+                    <option id="produtor">Produtor</option>
                 </select>
             </div>
-            <br>
+            <div id="pagamento" class="control-group">
+                <label class="control-label">Tipo de Pagamento Preferido:</label>
+                <select class="form-control" id="paymentype" name="accountype" onchange="pagamento()">
+                    <option>PaySafeCard</option>
+                    <option id="cartaocredito">Cartão de Crédito</option>
+                    <option id="paypal">Paypal</option>
+                </select>
+                <br />
+                <div id="cartao" class="panel panel-default" hidden>
+                    <div class="panel panel-body">
+                        <label for="numcartao" class="control-label">Número do Cartão: </label>
+                        <input id="numcartao" class="form-control" placeholder="Introduza o número do cartão" required="" type="number" />
+                        <hr />
+                        <label for="datavalidade" class="control-label col-xs-12 col-sm-12">Data de Validade: </label>
+                        <label for="mesvalidade" class="control-label col-xs-5 col-sm-5">
+                            <input id="mesvalidade" class="form-control" placeholder="Mês" required="" type="month" />
+                        </label>
+                        <label for="anovalidade" class="control-label col-xs-5 col-sm-5">
+                            <input id="anovalidade" class="form-control" placeholder="Ano" required="" type="number" />
+                        </label>
+                        <hr class="col-xs-12 col-sm-12"/>
+                        <label for="codigo" class="control-label">Código de Segurança: </label>
+                        <input id="codigo" class="form-control" placeholder="Introduza o código de segurança" required="" type="number" />
+                        <hr />
+                        <label class="control-label" for="marca"></label>
+                        <div class="col-xs-5">
+                            <label class="radio inline" for="visa">
+                                <input name="cartao" id="visa" value="visa" checked="checked" type="radio">Visa
+                            </label>
+                            <label class="radio inline" for="maestro">
+                                <input name="cartao" id="maestro" value="maestro" type="radio">Maestro
+                            </label>
+                        </div>
+                        <div class="col-xs-5">
+                            <label class="radio inline" for="mastercard">
+                                <input name="cartao" id="mastercard" value="mastercard" type="radio">MasterCard
+                            </label>
+                            <label class="radio inline" for="jcb">
+                                <input name="cartao" id="jcb" value="jcb" type="radio">JCB
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div id="pay" class="panel panel-default" hidden>
+                    <div class="panel panel-body">
+                        <label for="emailpaypal" class="control-label">Email da conta Paypal: </label>
+                        <input id="emailpaypal" class="form-control" placeholder="Introduza o email" required="" type="email" />
+                        <hr />
+                        <label for="passpaypal" class="control-label">Password: </label>
+                        <input id="passpaypal" class="form-control" placeholder="Introduza a password" required="" type="password" />
+                    </div>
+                </div>
+            </div>
+            <br />
             <div class="control-group">
                 <label class="control-label" for="humancheck">Verificar se é humano:</label>
                 <div class="controls">
@@ -57,8 +118,8 @@
                     </label>
                 </div>
             </div>
-            <button class="btn btn-lg btn-primary col-xs-5" type="submit">Registar</button>
-        </form>
+            <button class="btn btn-lg btn-primary col-xs-5" onclick="registo()" type="submit">Registar</button>
+        </div>
     </div>
     <hr class="prettyline">
 </section>

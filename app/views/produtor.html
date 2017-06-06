@@ -1,0 +1,55 @@
+﻿<section>
+    <div class="container">
+        <div class="row">
+            <br />
+            <br />
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 id="nome" class="panel-title"></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-md-9 col-lg-9">
+                                <table class="table table-user-information">
+                                    <tbody>
+                                        <tr>
+                                            <td>Email</td>
+                                            <td id="email"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Morada</td>
+                                            <td id="morada"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="editar" class="form-signin col-md-9 col-lg-9" hidden>
+                                <label for="primeironome" class="control-label">Primeiro Nome: </label>
+                                <input id="primeironome" class="form-control" placeholder="Introduza o seu primeiro nome" required="" type="text" />
+                                <label for="ultimonome" class="control-label">Último Nome: </label>
+                                <input id="ultimonome" class="form-control" placeholder="Introduza o seu último nome" required="" type="text" />
+                                <label for="registoEmail" class="control-label">Endereço Email</label>
+                                <input id="registoEmail" class="form-control" placeholder="Introduza o endereço email" required="" autofocus="" type="email">
+                                <label for="registoPassword" class="control-label">Password</label>
+                                <input id="registoPassword" class="form-control" placeholder="Introduza a password" required="" type="password">
+                                <div class="control-group">
+                                    <label class="control-label">Morada: </label>
+                                    <input id="address" class="form-control" placeholder="Introduza a sua morada" required="" type="text" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="loginbotoes" class="panel-footer col-xs-12">
+                        <button class="btn btn-warning col-xs-5" onclick="editar()">Editar</button>
+                        <button class="btn btn-danger col-xs-5" onclick="logout()">Logout</button>
+                    </div>
+                    <div id="editarbotoes" class="panel-footer col-xs-12" hidden>
+                        <button class="btn btn-warning col-xs-5" onclick="guardar()">Guardar</button>
+                        <button class="btn btn-danger col-xs-5" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
