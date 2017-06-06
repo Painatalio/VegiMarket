@@ -1,7 +1,7 @@
 ﻿define(['plugins/http', 'durandal/app', 'knockout'], function () {
     return {
         attached: function () {
-            var produtores = { 'produtor@vegimarket.pt': ['produtor@vegimarket.pt','produtor','João','Pereira','Avenida do Carmo'] };
+            var produtores = { 'produtor@vegimarket.pt': ['produtor@vegimarket.pt','produtor','João','Pereira','Avenida do Carmo', '872381084', '10', '17', '534'] };
             localStorage.setItem("produtores", JSON.stringify(produtores));
             var clientes = { 'cliente@vegimarket.pt': ['cliente@vegimarket.pt', 'cliente', 'Paulo', 'Carvalho', 'Rua D. Maria das Dores', 'cliente@hotmail.com', 'cliente'] };
             localStorage.setItem("clientes", JSON.stringify(clientes));

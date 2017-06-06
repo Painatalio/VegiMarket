@@ -13,7 +13,7 @@
                             <div class="controls">
                                 <div class="input-prepend">
                                     <label class="control-label"></label>
-                                    <input class="form-control" placeholder="Nome Completo" id="inputIcon" required="required" type="text">
+                                    <input id="nome" class="form-control" placeholder="Nome Completo" required="required" type="text">
                                 </div>
                             </div>
                         </div>
@@ -21,7 +21,7 @@
                             <div class="controls">
                                 <div class="input-prepend">
                                     <label class="control-label"></label>
-                                    <input class="form-control" placeholder="Introduza o seu email" id="inputIcon" required="required" type="email">
+                                    <input id="email" class="form-control" placeholder="Introduza o seu email" required="required" type="email">
                                 </div>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
                             <div class="controls">
                                 <div class="input-prepend">
                                     <label class="control-label"></label>
-                                    <input class="form-control" placeholder="Número de telemóvel" id="inputIcon" type="tel">
+                                    <input id="telemovel" class="form-control" placeholder="Número de telemóvel" type="tel">
                                 </div>
                             </div>
                         </div>
@@ -44,13 +44,13 @@
                         </div>
                         <div class="controls">
                             <label class="control-label"></label>
-                            <textarea id="message" name="message" class="form-control" placeholder="Escreva a sua mensagem" rows="5" required="required"></textarea>
+                            <textarea id="mensagem" name="message" class="form-control" placeholder="Escreva a sua mensagem" rows="5" required="required"></textarea>
                         </div>
                         <p>
                             <label class="checkbox">
                                 <input type="checkbox"> Subscrever à nossa newsletter
                             </label>
-                            <button class="btn btn-primary" type="submit">Enviar</button>
+                            <button class="btn btn-primary" onclick="enviar()" type="submit">Enviar</button>
                         </p>
                         <br />
                         <br />
