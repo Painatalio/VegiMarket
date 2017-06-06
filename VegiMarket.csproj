@@ -66,7 +66,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\viewmodels\carrinho.js" />
+    <Content Include="app\viewmodels\cliente.js" />
+    <Content Include="app\viewmodels\produtor.js" />
     <Content Include="app\views\carrinho.html" />
+    <Content Include="app\views\cliente.html" />
+    <Content Include="app\views\produtor.html" />
     <Content Include="Content\images\hortafina.png" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
