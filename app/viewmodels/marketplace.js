@@ -36,7 +36,6 @@
                 var regiao = $("#regiao option:selected").prop('id');
                 for (i = 0; i < produtos.length; i++) {
                     if (produtos[i].indexOf(produto) != -1 && produtos[i].indexOf(produtor) !=-1 && produtos[i].indexOf(regiao) != -1) {
-                        alert(produtos[i])
                         $("#" + produtos[i]).removeClass('hidden');
                     } else {
                         $("#" + produtos[i]).addClass('hidden');
