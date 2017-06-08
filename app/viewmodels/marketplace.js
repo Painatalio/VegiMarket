@@ -22,6 +22,28 @@
                 localStorage.setItem("carrinho", JSON.stringify(cart));
             };
 
+            detalhes = function (titulo, preco, produtor) {
+                $("#titulo").text(titulo);
+                $("#prod").text(produtor);
+                $("#preco").text(preco);
+            };
+
+            var produtos = ['MacaPortoNARCfrutas', 'LaranjaLisboaNARCfrutas', 'PessegoPortoHortaFina','MorangosAveiroHortaFina'];
+
+            pesquisa = function () {
+                var produto = $("#produto option:selected").prop('id');
+                var produtor = $("#produtor option:selected").prop('id');
+                var regiao = $("#regiao option:selected").prop('id');
+                for (i = 0; i < produtos.length; i++) {
+                    if (produtos[i].indexOf(produto) != -1 && produtos[i].indexOf(produtor) !=-1 && produtos[i].indexOf(regiao) != -1) {
+                        alert(produtos[i])
+                        $("#" + produtos[i]).removeClass('hidden');
+                    } else {
+                        $("#" + produtos[i]).addClass('hidden');
+                    }
+                }
+            }
+
             jQuery(document).ready(function () {
                 $('#qtyplus').click(function (e) {
                     e.preventDefault();
