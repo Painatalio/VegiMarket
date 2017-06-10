@@ -1,4 +1,5 @@
-URL: https://build.phonegap.com/apps/2623487/share
+URL PhoneGap: https://build.phonegap.com/apps/2623487/share
+URL GitHub: https://github.com/Painatalio/VegiMarket
 
 ---LOGINS---
 
