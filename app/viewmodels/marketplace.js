@@ -22,10 +22,11 @@
                 localStorage.setItem("carrinho", JSON.stringify(cart));
             };
 
-            detalhes = function (titulo, preco, produtor) {
+            detalhes = function (titulo, preco, produtor, regiao) {
                 $("#titulo").text(titulo);
                 $("#prod").text(produtor);
                 $("#preco").text(preco);
+                $("#reg").text(regiao);
             };
 
             var produtos = ['MacaPortoNARCfrutas', 'LaranjaLisboaNARCfrutas', 'PessegoPortoHortaFina','MorangosAveiroHortaFina'];
