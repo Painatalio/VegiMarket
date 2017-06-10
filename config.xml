@@ -1,7 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
+﻿<?xml version='1.0' encoding='utf-8'?>
 <widget version="1.0.0.201511151632" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
   <name>VegiMarket</name>
-  <description></description>
+  <description>O mercado em sua casa</description>
   <author email="pedro.joseferreira@ua.pt" href="www.ua.pt/deti">Departamento de Engª Elestrónica e Telecomunicações, Universidade de Aveiro</author>
   <preference name="permissions" value="none" />
   <preference name="orientation" value="default" />

@@ -24,8 +24,8 @@
                 conta = document.getElementById("accountype").value;
                 clientes = JSON.parse(localStorage.getItem("clientes"));
                 produtores = JSON.parse(localStorage.getItem("produtores"));
-                var email = document.getElementById("loginEmail").value;
-                var password = document.getElementById("loginPassword").value;
+                var email = document.getElementById("loginEmail").value.trim();
+                var password = document.getElementById("loginPassword").value.trim();
                 if (conta == "Cliente") {
                     if (email in clientes && password == clientes[email][1]) {
                         var cliente = clientes[email];
@@ -69,11 +69,11 @@
             }
             registo = function () {
                 conta = document.getElementById("accountype").value;
-                var primeironome = document.getElementById("primeironome").value;
-                var ultimonome = document.getElementById("ultimonome").value;
-                var email = document.getElementById("registoEmail").value;
-                var password = document.getElementById("registoPassword").value;
-                var repassword = document.getElementById("reenterpassword").value;
+                var primeironome = document.getElementById("primeironome").value.trim();
+                var ultimonome = document.getElementById("ultimonome").value.trim();
+                var email = document.getElementById("registoEmail").value.trim();
+                var password = document.getElementById("registoPassword").value.trim();
+                var repassword = document.getElementById("reenterpassword").value.trim();
                 var verificacao = document.getElementById("humancheck-1").checked;
                 var morada = document.getElementById("morada").value;
                 var paypal = document.getElementById("paypal").selected;
